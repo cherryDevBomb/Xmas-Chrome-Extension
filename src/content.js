@@ -4,51 +4,14 @@ import "./content.css";
 
 class LightRope extends React.Component {
   render() {
+
+    const nrOfBulbs = 40;
+    const bulbBody = <li></li>;
+
     return (
       <div className={'my-extension'}>
         <ul className="lightrope">
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
+          {Array(nrOfBulbs).fill(bulbBody)}
         </ul>
       </div>
     )
@@ -58,4 +21,4 @@ class LightRope extends React.Component {
 const app = document.createElement('div');
 app.id = "xmas-lights-extension-root";
 document.body.appendChild(app);
-ReactDOM.render(<LightRope />, app);
+ReactDOM.render(<LightRope/>, app);
