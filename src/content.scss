@@ -1,8 +1,27 @@
-$globe-width:   12px;
-$globe-height:  28px;
+$globe-width:   11px;
+$globe-height:  25px;
 $globe-spacing: 40px;
 $globe-spread: 3px;
+
 $light-off-opacity: 0.4;
+$box-shadow-opacity: 0.2;
+
+$color-1: rgba(0, 247, 165, 1);
+$color-1-lights-off: rgba($color-1, $light-off-opacity);
+$color-1-box-shadow: rgba($color-1, $box-shadow-opacity);
+
+$color-2: rgba(0,255,255,1);
+$color-2-lights-off: rgba($color-2, $light-off-opacity);
+$color-2-box-shadow: rgba($color-2, $box-shadow-opacity);
+
+$color-3: rgba(247,0,148,1);
+$color-3-lights-off: rgba($color-3, $light-off-opacity);
+$color-3-box-shadow: rgba($color-3, $box-shadow-opacity);
+
+
+//TODO add messaging to remove popup
+//TODO add icon to represent extension
+//TODO play with colors
 
 #xmas-lights-extension-root {
   width: 100%;
@@ -38,19 +57,19 @@ $light-off-opacity: 0.4;
     border-radius: 50%;
     margin: $globe-spacing/2;
     display: inline-block;
-    background: rgba(0,247,165,1);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,1);
+    background: $color-1;
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-1;
     animation-name: flash-1;
     animation-duration: 2s;
     &:nth-child(2n+1) {
-      background: rgba(0,255,255,1);
-      box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,255,255,0.5);
+      background: $color-2;
+      box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-3;
       animation-name: flash-2;
       animation-duration: 0.4s;
     }
     &:nth-child(4n+2) {
-      background: rgba(247,0,148,1);
-      box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,1);
+      background: $color-3;
+      box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-3;
       animation-name: flash-3;
       animation-duration: 1.1s;
     }
@@ -89,20 +108,20 @@ $light-off-opacity: 0.4;
   }
 }
 @keyframes flash-1 {
-  0%, 100% { background: rgba(0,247,165,1);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,1);}
-  50% { background: rgba(0,247,165,$light-off-opacity);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,247,165,0.2);}
+  0%, 100% { background: $color-1;
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-1;}
+  50% { background: $color-1-lights-off;
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-1-box-shadow;}
 }
 @keyframes flash-2 {
-  0%, 100% { background: rgba(0,255,255,1);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,255,255,1);}
-  50% { background: rgba(0,255,255,$light-off-opacity);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(0,255,255,0.2);}
+  0%, 100% { background: $color-2;
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-2;}
+  50% { background: $color-2-lights-off;
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-2-box-shadow;}
 }
 @keyframes flash-3 {
-  0%, 100% { background: rgba(247,0,148,1);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,1);}
-  50% { background: rgba(247,0,148,$light-off-opacity);
-    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread rgba(247,0,148,0.2);}
+  0%, 100% { background: $color-3;
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-3;}
+  50% { background: $color-3-lights-off;
+    box-shadow: 0px $globe-height/6 $globe-width*2 $globe-spread $color-3-box-shadow;}
 }
