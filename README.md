@@ -6,8 +6,16 @@ A Google Chrome Extension built with ReactJS that decorates web pages with Chris
 <p align="center"><img src="demo.gif" width="500"></p>
 
 ### Getting started
-- `yarn install`
-- `yarn build`
+To get the production build you can run
+```
+git clone
+yarn install
+yarn build
+``` 
+
+or download the `build` directly from the latest release
+
+#### Enabling the extension
 - Go to `chrome://extensions/`, click `Load unpacked` and select `[PROJECT_HOME]/build`
 - Use the light-switch extension icon to toggle lights on and off
 
