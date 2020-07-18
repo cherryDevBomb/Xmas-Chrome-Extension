@@ -13,5 +13,10 @@
   ],
   "background": {
     "scripts": ["background.js"]
-  }
+  },
+  "icons": {
+    "16": "light-switch-16.png",
+    "32": "light-switch-32.png",
+    "48": "light-switch-64.png",
+    "128": "light-switch-128.png" }
 }
